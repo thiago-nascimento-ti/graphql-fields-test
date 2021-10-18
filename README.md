@@ -11,6 +11,7 @@ yarn dev
 ```
 
 ## Description
+This query must perform a single call to the endpoint still on the [main node resolver](https://github.com/thiago-nascimento-ti/graphql-fields-test/blob/50ea87985b9fae319598b47b624224f34ff9700f/src/schema/types/book/index.js#L34) passing the subfield's [limit argument](https://github.com/thiago-nascimento-ti/graphql-fields-test/blob/50ea87985b9fae319598b47b624224f34ff9700f/src/schema/types/book/index.js#L14) where it is extracted [here](https://github.com/thiago-nascimento-ti/graphql-fields-test/blob/50ea87985b9fae319598b47b624224f34ff9700f/src/schema/types/book/index.js#L26)
 
 ```graphql
 query MyQuery($bookId: Int!, $genreLimit: Int) {
@@ -27,4 +28,9 @@ query MyQuery($bookId: Int!, $genreLimit: Int) {
   "bookId": 1,
   "genreLimit": 1
 }
+```
+
+Call made to the backend
+```curl
+curl --location --request GET 'http://localhost:3000/books?id=1&genre._limit=1'
 ```
