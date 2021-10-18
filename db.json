@@ -1,0 +1,23 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "Life of Pi",
+            "author": "Yann Martel",
+            "genre": [
+                { "name": "Classics" },
+                { "name": "Historical Fiction" },
+                { "name": "Fantasy" }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "City of Glass",
+            "author": "Paul Auster",
+            "genre": [
+                { "name": "Horror" },
+                { "name": "Detective and Mystery" }
+            ]
+        }
+    ]
+}
